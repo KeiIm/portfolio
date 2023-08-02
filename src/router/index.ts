@@ -20,11 +20,6 @@ const router = createRouter({
       component: () => import('../views/ProjectsView.vue')
     },
     {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('../views/ContactView.vue')
-    },
-    {
       path: '/:pathMatch(.*)*',
       name: '404',
       component: () => import('../views/404View.vue')
@@ -33,3 +28,4 @@ const router = createRouter({
 })
 
 export default router
+// https://github.com/posva/unplugin-vue-router
