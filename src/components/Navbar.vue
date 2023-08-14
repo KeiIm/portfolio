@@ -4,7 +4,7 @@
   <div class="background">
 
     <h1 class="name">Kei.im</h1>
-    <nav>
+    <nav class="navlinks">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About Me</RouterLink>
         <RouterLink to="/projects">Projects</RouterLink>
@@ -84,14 +84,17 @@ nav a.router-link-exact-active:hover {
 @media screen and (max-width: 1100px), screen and (max-device-width: 1100px) {
   header {
     height: var(--height-navbar-top);
+    min-height: 130px;
     width: 100vw;
     position: relative;
   }
   .border {
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   }
   .background {
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 98%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 78%, 0 98%); */
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0 78%);
   }
   nav {
     flex-direction: row;
@@ -107,6 +110,7 @@ nav a.router-link-exact-active:hover {
   }
   .links {
     left: 0;
+    padding: 0 0.5rem 2rem;
   }
   .links i {
     padding: 0 1rem;

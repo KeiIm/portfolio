@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "0.8.0",
+  "description": "Personal Home Page using Vite",
+  "author": "Kei Imamura <k.e.imamura@outlook.com>",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

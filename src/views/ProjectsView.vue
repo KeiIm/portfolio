@@ -1,6 +1,7 @@
 <template>
-
-<Navbar />
+<div class="nav">
+  <Navbar />
+</div>
 
 <div class="projects">
   <h1>Projects</h1>
@@ -41,7 +42,6 @@
   </ProjectCard>
 
 </div>
-<p>hello world</p>
 </template>
 
 <script setup lang="ts">
@@ -51,15 +51,14 @@ import ProjectCard from '../components/ProjectCard.vue'
 
 <style scoped>
 /* Desktop Style */
-
-
-body {
-  overflow: visible;
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
-
 .projects {
-  overflow: visible;
+  overflow: auto;
   overflow-x: hidden;
   height: 100%;
   min-height: 100vh;
@@ -80,9 +79,13 @@ body {
   margin: 1rem 0;
   display: flex;
   min-height: 250px;
+  height: 100%;
+  background-image: linear-gradient(90deg, var(--color2-3), var(--color2-32));
+  border-radius: 20px;
 }
 .card:nth-of-type(even) {
   flex-direction: row-reverse;
+  background-image: linear-gradient(270deg, var(--color2-3), var(--color2-32));
 }
 
 /* Border Limit */

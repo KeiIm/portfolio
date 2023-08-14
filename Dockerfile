@@ -1,10 +1,17 @@
-FROM node:20-alpine3.17
-
-COPY package.json /app/
-COPY src /app/
+# FROM node:20-alpine3.17
+FROM node:18
 
 WORKDIR /app
 
-RUN npm install
+COPY *.json /app/
+COPY *.html /app/
+COPY *.ts /app/
+COPY resume.pdf /app/
+COPY src /app/src/
 
-CMD ["node", "main.ts"]
+RUN npm install
+# RUN npm install -g server
+
+EXPOSE 8081
+# CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+CMD ["npm", "run", "dev"]

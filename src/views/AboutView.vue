@@ -90,8 +90,8 @@
 
   <dialog id="resume">
     <div class="buttons">
-      <button id="close-resume" onclick="resume.close()">Close</button>
       <a href="../resume.pdf" target="_blank">Download PDF</a>
+      <button id="close-resume" onclick="resume.close()">Close</button>
     </div>
     <object data="../resume.pdf" type="application/pdf" width="1440" height="1000">
       <p>This browser does not support PDFs. Please download the PDF to view it:</p>
@@ -218,7 +218,7 @@ dialog[open] {
 }
 dialog .buttons {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
 }
 dialog .buttons a {
@@ -238,9 +238,15 @@ box-shadow: none;
     padding: 1rem 3rem;
     justify-content: flex-start; 
   }
+  .skills-container {
+    justify-content: center;
+  }
   .block {
     width: clamp(180px, 30%, 420px);
   }
+  dialog {
+  /* width: 1000px; */
+}
 }
 
 /* Tablet Style */
