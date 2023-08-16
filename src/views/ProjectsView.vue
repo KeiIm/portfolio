@@ -11,8 +11,7 @@
     <template #tools>HTML, CSS, PHP, MySQL, Bootstrap</template>
     <p>A full-stack web application to help sort through your trading card game collections with easy to use
     drag-and-drop functionalities.</p>
-    <template #github>github link</template>
-    <template #demo>Live Demo</template>
+    <template #links>Links Coming Soon</template>
   </ProjectCard>
 
   <ProjectCard class="card">
@@ -20,8 +19,7 @@
     <template #tools>HTML, CSS, Typescript, Vue.js, Pinia, Bootstrap-Vue</template>
     <p>A web application for two players to mock draft a deck of cards that they can import from select
     databases, then export the drafted decks for online play.</p>
-    <template #github>github link</template>
-    <template #demo>Live Demo</template>
+    <template #links>Links Coming Soon</template>
   </ProjectCard>
 
   <ProjectCard class="card">
@@ -29,16 +27,14 @@
     <template #tools>HTML, CSS, Javascript, Express, MongoDB, Bootstrap</template>
     <p>A full-stack website with authorization & authentication, allowing users to rate and comment campsites, with full
     CRUD capabilities. Also uses map APIs.</p>
-    <template #github>github link</template>
-    <template #demo>Live Demo</template>
+    <template #links>Links Coming Soon</template>
   </ProjectCard>
 
   <ProjectCard class="card">
     <template #title>Front Page Design</template>
     <template #tools>HTML, CSS, Javascript</template>
     <p>Mock websites to developt front-end skills, mimicking existing websites.</p>
-    <template #github>github link</template>
-    <template #demo>Live Demo</template>
+  <template #links>Links Coming Soon</template>
   </ProjectCard>
 
 </div>
@@ -63,13 +59,13 @@ import ProjectCard from '../components/ProjectCard.vue'
   height: 100%;
   min-height: 100vh;
   width: var(--width-content-side);
-  left: 18vw;
-  padding: 3rem 6rem 3rem 3rem;
+  left: var(--width-navbar-side);
+  padding: 3rem 5rem 3rem 3rem;
+  scroll-padding: 1rem 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
   align-items: center;
-  scroll-padding: 1rem 0 0 0;
 }
 .projects h1 {
   text-align: center;
@@ -78,8 +74,9 @@ import ProjectCard from '../components/ProjectCard.vue'
 .card {
   margin: 1rem 0;
   display: flex;
-  min-height: 250px;
   height: 100%;
+  /* min-height: 250px; */
+  width: clamp(800px, calc(540px + 30vw), 1600px);
   background-image: linear-gradient(90deg, var(--color2-3), var(--color2-32));
   border-radius: 20px;
 }
@@ -91,11 +88,19 @@ import ProjectCard from '../components/ProjectCard.vue'
 /* Border Limit */
 @media screen and (max-width: 1100px), screen and (max-device-width: 1100px) {
   .projects {
-    height: 82vh;
+    height: var(--height-content-top);
     min-height: auto;
     width: 100vw;
     left: 0;
     padding: 1rem 3rem;
+  }
+}
+
+/* Image Limit */
+@media screen and (max-width: 900px), screen and (max-device-width: 900px) {
+  .card {
+    width: clamp(400px, calc(240px + 42vw), 800px);
+    /* height: 300px; */
   }
 }
 

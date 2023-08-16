@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card-container">
     <img src="../assets/sample-screenshot.png" alt="">
     <div class="details">
 
@@ -14,8 +14,10 @@
       <slot></slot>
 
       <div class="links">
-        <button><slot name="github"></slot></button>
-        <button><slot name="demo"></slot></button>
+        <button><slot name="links"></slot></button>
+        <!-- <a <slot name="link"></slot> >
+          Link
+        </a> -->
       </div>
 
     </div>
@@ -24,8 +26,7 @@
 
 <style scoped>
 img {
-  height: auto;
-  width: clamp(150px, 45vw, 400px);
+  height: 225px;
   border-radius: 15px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -47,5 +48,20 @@ img {
   align-items: center;
   gap: 2rem;
   padding: 1rem;
+}
+
+/* While projects are being cleaned up: */
+.details .links {
+  text-decoration: line-through;
+}
+button {
+  cursor: not-allowed;
+}
+
+/* Image Limit */
+@media screen and (max-width: 900px), screen and (max-device-width: 900px) {
+  img {
+    display: none;
+  }
 }
 </style>

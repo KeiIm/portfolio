@@ -11,10 +11,22 @@
     </nav>
 
     <div class="links">
-      <a href="https://www.linkedin.com/in/keiimamura/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/KeiIm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-      <a href="mailto:@k.e.imamura@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/keiimamura/" alt="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/KeiIm" alt="Github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:k.e.imamura@outlook.com" alt="Email"><i class="fa-solid fa-envelope"></i></a>
+      <button alt="Resume" onclick="resume.showModal()"><i class="fa-regular fa-file"></i></button>
     </div>
+
+    <dialog id="resume">
+      <div class="buttons">
+        <a href="/resume.pdf" target="_blank">Download PDF</a>
+        <button id="close-resume" onclick="resume.close()">Close &times;</button>
+      </div>
+
+      <object data="/resume.pdf" type="application/pdf" title="resume" width="1440" height="1000">
+        <p style="color:white">This browser does not support PDFs. Please download the PDF to view it</p>
+      </object>
+    </dialog>
 
   </div>
 </header>
@@ -48,18 +60,18 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: clamp(1em, 10%, 3rem); 
+  /* padding-left: 1rem;  */
 }
-.background .name {
-  padding-left: 1rem;
+.name {
+  /* font-size: clamp(2.59rem, calc(1.78rem + 4.07vw), 4.93rem) */
+  font-size: clamp(2.5rem, calc(1rem + 2vw), 4.5rem);
 }
 
 nav {
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
-}
-nav a {
-  padding-left: 1rem;
 }
 nav a.router-link-exact-active {
   color: var(--color-text);
@@ -72,12 +84,66 @@ nav a.router-link-exact-active:hover {
 .links {
   display: flex;
   justify-content: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
   font-size: 1.7rem;
   left: -0.6rem;
+  gap: 0.4rem;
 }
 .links i {
   padding: 0 0.6rem;
+}
+.links button {
+  padding: none;
+  font-size: 1.6rem;
+  text-align: center;
+  outline: none;
+  /* color:  */
+  /* background-color: none; */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+}
+.links button:hover {background-color: var(--color-hover)}
+.links button:active {
+  background-color: var(--color-hover);
+  box-shadow: none;
+  transform: none;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+dialog {
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  scale: 0;
+  background: var(--color2-1);
+  display: block;
+  position: fixed;
+  /* width: 1441x; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+dialog[open] {
+  opacity: 1;
+  scale: 1;
+}
+dialog .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+dialog .buttons a {
+  padding: 0.2rem;
+}
+dialog .buttons button {
+box-shadow: none;
 }
 
 /* Border Limit */
@@ -95,9 +161,12 @@ nav a.router-link-exact-active:hover {
   .background {
     /* clip-path: polygon(0 0, 100% 0, 100% 78%, 0 98%); */
     clip-path: polygon(0 0, 100% 0, 100% 98%, 0 78%);
+    padding-left: clamp(1em, 2%, 3rem); 
   }
+
   nav {
     flex-direction: row;
+    /* left: -1rem; */
   }
   nav a {
     white-space: nowrap;
@@ -107,10 +176,13 @@ nav a.router-link-exact-active:hover {
   }
   nav a:first-of-type {
     border: 0;
+    /* padding: 0 2rem;
+    left: -1rem; */
   }
   .links {
-    left: 0;
+    left: -0.5rem;
     padding: 0 0.5rem 2rem;
+    /* gap: 1rem; */
   }
   .links i {
     padding: 0 1rem;
