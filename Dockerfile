@@ -6,7 +6,7 @@ WORKDIR /app
 COPY *.json /app/
 COPY *.html /app/
 COPY *.ts /app/
-COPY resume.pdf /app/
+COPY public /app/public/
 COPY src /app/src/
 
 RUN npm install

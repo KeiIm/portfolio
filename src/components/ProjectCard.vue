@@ -1,6 +1,7 @@
 <template>
   <div class="card-container">
-    <img src="../assets/sample-screenshot.png" alt="">
+    <!-- <img src="../assets/screenshot-draft.png" alt="screenshot"> -->
+    <img :src="imgURL" alt="Sample Screenshot">
     <div class="details">
 
       <h2>
@@ -24,9 +25,23 @@
   </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  props: {
+    imgURL: {
+        required: true,
+        type: String
+    }
+  }
+})
+</script>
+
 <style scoped>
 img {
   height: 225px;
+  width: 440px;
   border-radius: 15px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
