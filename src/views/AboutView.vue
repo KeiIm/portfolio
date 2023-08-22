@@ -208,7 +208,8 @@ import Navbar from '../components/Navbar.vue'
     min-height: fit-content;
     width: 100vw;
     left: 0;
-    padding: 1rem 3rem;
+    top: -4vh;
+    padding: 2rem 3rem 1rem;
     justify-content: flex-start; 
     /* align-items: flex-start; */
   }
@@ -219,15 +220,16 @@ import Navbar from '../components/Navbar.vue'
     width: clamp(180px, 30%, 420px);
   }
   .bio {
-  padding: 1rem;
-  left: -1rem;
-  margin: 1rem;
-  width: 80vw;
-}
-.bio p {
-  width: clamp(20ch, calc(8ch + 60vw), 75ch);
-  margin: 1rem 0;
-}
+    background-image: linear-gradient(90deg, var(--color2-3), var(--color2-32), var(--color2-3));
+    padding: 1rem;
+    left: -1rem;
+    margin: 1rem;
+    width: 80vw;
+  }
+  .bio p {
+    width: clamp(15ch, calc(8ch + 60vw), 75ch);
+    margin: 1rem 0;
+  }
 }
 
 /* Tablet Style */
@@ -238,5 +240,11 @@ import Navbar from '../components/Navbar.vue'
 /* Mobile Style */
 @media screen and (max-width: 414px), screen and (max-device-width: 414px) {
 
+}
+
+@media screen and (max-height: 730px), screen and (max-device-height: 730px) {
+  .about {
+    height: 80vh;
+  }
 }
 </style>

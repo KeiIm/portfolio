@@ -29,10 +29,9 @@
   --color-text: hsla(0, 0%, 92%, 0.75);
   --color-hover: hsla(46, 100%, 50%, 0.2);
   --width-navbar-side: 18vw;
-  --height-navbar-top: 20vh;
   --width-content-side: 82vw;
-  --height-content-top: 80vh;
-  /* width adds to 100 */
+  --height-navbar-top: 20vh;
+  --height-content-top: 84vh;
 }
 
 body {
@@ -44,6 +43,11 @@ body {
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
   overflow-x: hidden; /* formerly just overflow */
+}
+@media screen and (max-width: 1100px), screen and (max-device-width: 1100px) {
+  body {
+      overflow: hidden;
+  }
 }
 
 h1, h2 {

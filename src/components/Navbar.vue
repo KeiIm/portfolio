@@ -11,10 +11,10 @@
     </nav>
 
     <div class="links">
-      <a href="https://www.linkedin.com/in/keiimamura/" alt="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/KeiIm" alt="Github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-      <a href="mailto:k.e.imamura@outlook.com" alt="Email"><i class="fa-solid fa-envelope"></i></a>
-      <button alt="Resume" onclick="resume.showModal()"><i class="fa-regular fa-file"></i></button>
+      <a href="https://www.linkedin.com/in/keiimamura/" title="LinkedIn" alt="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/KeiIm" title="Github" alt="Github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:k.e.imamura@outlook.com" title="Email" alt="Email"><i class="fa-solid fa-envelope"></i></a>
+      <button title="Resume" alt="Resume" onclick="resume.showModal()"><i class="fa-regular fa-file"></i></button>
     </div>
 
     <dialog id="resume">
@@ -84,26 +84,33 @@ nav a.router-link-exact-active:hover {
 .links {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
   padding: 1rem 0;
   font-size: 1.7rem;
-  left: -0.6rem;
-  gap: 0.4rem;
+  /* left: -0.6rem; */
+  gap: 0.2rem;
+  left: -10px;
 }
-.links i {
-  padding: 0 0.6rem;
+@media screen and (max-width: 1450px), screen and (max-device-width: 1450px) {
+  .links {
+    width: 120px;
+  }
+}
+.links a, button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 35px;
+  /* padding: 0.4rem 0.2rem; */
 }
 .links button {
-  padding: none;
-  font-size: 1.6rem;
-  text-align: center;
-  outline: none;
-  /* color:  */
-  /* background-color: none; */
-  border: none;
+  font-size: 1.5rem;
   border-radius: 0;
   box-shadow: none;
-  cursor: pointer;
-  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+
+  /* padding: 0.3rem 0.6rem 0.3rem 0.6rem; */
 }
 .links button:hover {background-color: var(--color-hover)}
 .links button:active {
@@ -137,9 +144,6 @@ dialog[open] {
 dialog .buttons {
   width: 100%;
   height: 40px;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
 }
 dialog .buttons a {
   position: absolute;
@@ -161,7 +165,6 @@ dialog .buttons #close-resume {
 @media screen and (max-width: 1100px), screen and (max-device-width: 1100px) {
   header {
     height: var(--height-navbar-top);
-    min-height: 130px;
     width: 100vw;
     position: relative;
   }
@@ -177,7 +180,8 @@ dialog .buttons #close-resume {
 
   nav {
     flex-direction: row;
-    /* left: -1rem; */
+    left: -1rem;
+    top: -0.3rem;
   }
   nav a {
     white-space: nowrap;
@@ -191,12 +195,19 @@ dialog .buttons #close-resume {
     left: -1rem; */
   }
   .links {
-    left: -0.5rem;
     padding: 0 0.5rem 2rem;
+    width: 100%;
+    top: -0.3rem;
     /* gap: 1rem; */
   }
   .links i {
     padding: 0 1rem;
+  }
+
+  @media screen and (max-height: 730px), screen and (max-device-height: 730px) {
+    header {
+      height: 145px;
+    }
   }
 }
 

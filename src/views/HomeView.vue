@@ -8,10 +8,10 @@
       <RouterLink to="/projects">Projects</RouterLink>
   </nav>
   <div class="links">
-    <a href="https://www.linkedin.com/in/keiimamura/" alt="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/KeiIm" alt="Github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-    <a href="mailto:k.e.imamura@outlook.com" alt="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="/resume.pdf" alt="Resume" target="_blank"><i class="fa-regular fa-file"></i></a>
+    <a href="https://www.linkedin.com/in/keiimamura/" title="LinkedIn" alt="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/KeiIm" title="Github" alt="Github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+    <a href="mailto:k.e.imamura@outlook.com" title="Email" alt="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="/resume.pdf" title="Resume" alt="Resume" target="_blank"><i class="fa-regular fa-file"></i></a>
   </div>
 </main>
 </template>

@@ -90,10 +90,12 @@ import ProjectCard from '../components/ProjectCard.vue'
 @media screen and (max-width: 1100px), screen and (max-device-width: 1100px) {
   .projects {
     height: var(--height-content-top);
+    top: -4vh;
+
     min-height: auto;
     width: 100vw;
     left: 0;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem 1rem;
   }
 }
 
@@ -113,5 +115,11 @@ import ProjectCard from '../components/ProjectCard.vue'
 /* Mobile Style */
 @media screen and (max-width: 414px), screen and (max-device-width: 414px) {
 
+}
+
+@media screen and (max-height: 730px), screen and (max-device-height: 730px) {
+  .projects {
+    height: 80vh;
+  }
 }
 </style>
