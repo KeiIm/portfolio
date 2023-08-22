@@ -1,6 +1,5 @@
 <template>
   <div class="card-container">
-    <!-- <img src="../assets/screenshot-draft.png" alt="screenshot"> -->
     <img :src="imgURL" alt="Sample Screenshot">
     <div class="details">
 
@@ -42,6 +41,8 @@ export default defineComponent({
 img {
   height: 225px;
   width: 440px;
+  /* max-width: 100%;
+  height: auto; */
   border-radius: 15px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -66,11 +67,13 @@ img {
 }
 
 /* While projects are being cleaned up: */
-.details .links {
-  text-decoration: line-through;
-}
+
 button {
   cursor: not-allowed;
+  box-shadow: none;
+}
+button:hover {
+  background: var(--color2-2)
 }
 
 /* Image Limit */

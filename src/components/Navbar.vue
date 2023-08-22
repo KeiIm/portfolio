@@ -135,15 +135,26 @@ dialog[open] {
   scale: 1;
 }
 dialog .buttons {
-  display: flex;
+  width: 100%;
+  height: 40px;
+  /* display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; */
 }
 dialog .buttons a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 0.2rem;
 }
-dialog .buttons button {
-box-shadow: none;
+dialog .buttons #close-resume {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: none;
+  padding: 0.25rem 0.5rem;
 }
 
 /* Border Limit */

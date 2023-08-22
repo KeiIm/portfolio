@@ -104,6 +104,7 @@ import Navbar from '../components/Navbar.vue'
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .about {
@@ -217,6 +218,16 @@ import Navbar from '../components/Navbar.vue'
   .block {
     width: clamp(180px, 30%, 420px);
   }
+  .bio {
+  padding: 1rem;
+  left: -1rem;
+  margin: 1rem;
+  width: 80vw;
+}
+.bio p {
+  width: clamp(20ch, calc(8ch + 60vw), 75ch);
+  margin: 1rem 0;
+}
 }
 
 /* Tablet Style */

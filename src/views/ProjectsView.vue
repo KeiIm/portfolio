@@ -6,7 +6,7 @@
 <div class="projects">
   <h1>Projects</h1>
 
-  <ProjectCard class="card" imgURL="screenshot-collection.png">
+  <ProjectCard class="card" imgURL="/src/assets/screenshot-collection.png">
     <template #title>Card Collection Manager</template>
     <template #tools>HTML, CSS, PHP, MySQL, Bootstrap</template>
     <p>A full-stack web application to help sort through your trading card game collections with easy to use
@@ -14,7 +14,7 @@
     <template #links>Links Coming Soon</template>
   </ProjectCard>
 
-  <ProjectCard class="card" imgURL="screenshot-draft.png">
+  <ProjectCard class="card" imgURL="/src/assets/screenshot-draft.png">
     <template #title>TCG Grid Drafting</template>
     <template #tools>HTML, CSS, Typescript, Vue.js, Pinia, Bootstrap-Vue</template>
     <p>A web application for two players to mock draft a deck of cards that they can import from select
@@ -22,7 +22,7 @@
     <template #links>Links Coming Soon</template>
   </ProjectCard>
 
-  <ProjectCard class="card" imgURL="screenshot-yelp.png">
+  <ProjectCard class="card" imgURL="/src/assets/screenshot-yelp.png">
     <template #title>Yelp Camp</template>
     <template #tools>HTML, CSS, Javascript, Express, MongoDB, Bootstrap</template>
     <p>A full-stack website with authorization & authentication, allowing users to rate and comment campsites, with full
@@ -43,16 +43,6 @@
 <script setup lang="ts">
 import Navbar from '../components/Navbar.vue'
 import ProjectCard from '../components/ProjectCard.vue'
-// import {defineComponent, ref} from 'vue'
-
-// defineComponent({
-//   components: {Navbar, ProjectCard},
-//   setup(props {
-//     const imgURL = ref<String>('hello')
-//   })
-
-// })
-
 </script>
 
 <style scoped>
@@ -61,6 +51,7 @@ import ProjectCard from '../components/ProjectCard.vue'
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .projects {
